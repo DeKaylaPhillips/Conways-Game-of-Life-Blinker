@@ -7,7 +7,6 @@ class Game_Of_Life:
         self.rows = rows
         self.columns = columns
         self.gridArr = []
-        self.gridStr = ''
 
     def start_interface(self):
         answer = input("Welcome to Conway's Game of Life. Would you like to see the 3x3 blinker pattern? Select Y or N.\n\n")
