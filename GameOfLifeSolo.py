@@ -14,9 +14,11 @@ class Game_Of_Life:
         if answer.casefold() == 'y':
             print('\nHere is your grid!\n')
             return self.create_grid()  
+        
         elif answer.casefold() == 'n':
             print('\nExiting the game. Goodbye!\n')
             return quit()
+        
         print('\nInvalid input! Try again.\n')
         return self.start_interface()
 
