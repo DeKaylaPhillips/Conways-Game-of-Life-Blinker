@@ -8,6 +8,7 @@ class Game_Of_Life:
         self.columns = columns
         self.gridArr = []
 
+
     def start_interface(self):
         answer = input("Welcome to Conway's Game of Life. Would you like to see the 3x3 blinker pattern? Select Y or N.\n\n")
         
@@ -35,6 +36,7 @@ class Game_Of_Life:
         
         return self.selection()
 
+
     def selection(self):
         answer = input('\nWould you like to start? Select Y or N.\n\n')
         
@@ -49,6 +51,7 @@ class Game_Of_Life:
         print('Invalid input! Try again.')
         return self.create_grid()
         
+
     def start_game(self):
         pattern = 0
 
@@ -67,16 +70,17 @@ class Game_Of_Life:
         
         return 'This is the oscillating blinking pattern. :)'
 
+
     def horizontal_cells(self):
         self.gridArr[1] = [1] * self.columns    
         
         for rows in self.gridArr:               
             print(rows)
         
-        self.gridArr[1] = [0] * self.columns
-        
+        self.gridArr[1] = [0] * self.columns 
         return self.gridArr
-            
+
+
     def vertical_cells(self):
         for rows in self.gridArr:       
             rows[1] = 1
@@ -86,6 +90,7 @@ class Game_Of_Life:
             rows[1] = 0
 
         return self.gridArr
+
 
 game = Game_Of_Life()
 print(game.start_interface()) # Don't touch this line! Code not yet optimized to function with more complex patterns/grids :( !
